@@ -150,7 +150,7 @@
 
     <div class="col-12">
       <label style="color:blue" style="font-style:oblique">PAYMENT ::</label>
-      <label for="upi" style="color:blue">Cash</label>&nbsp;
+      
       <input
         type="radio"
         id="payment_mode"
@@ -159,8 +159,10 @@
         required="true"
         [(ngModel)]="model.payment_mode"
       />
+      <label for="upi" style="color:blue">Cash</label>&nbsp;
+
       &nbsp;
-      <label for="male" style="color:blue">Upi</label>&nbsp;
+      
       <input
         type="radio"
         id="payment_mode"
@@ -169,8 +171,10 @@
         required="true"
         [(ngModel)]="model.payment_mode"
       />
+      <label for="male" style="color:blue">Upi</label>&nbsp;
+
       &nbsp;
-      <label for="other" style="color:blue">Gpay</label>&nbsp;
+      
       <input
         type="radio"
         id="payment_mode"
@@ -179,6 +183,8 @@
         required="true"
         [(ngModel)]="model.payment_mode"
       />
+      <label for="other" style="color:blue">Gpay</label>&nbsp;
+      
     </div>
     <br />
 
