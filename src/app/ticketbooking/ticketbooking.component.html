@@ -40,7 +40,7 @@
 
     <div class="col-12" style="text-align:center">
     <label for="gender" style="color:blue" style="font-style:oblique"> GENDER :: </label>
-      <label for="male" style="color:blue">Male</label>&nbsp;
+      
       <input
         type="radio"
         id="gender"
@@ -49,8 +49,9 @@
         
         [(ngModel)]="model.gender"
       />
+      <label for="male" style="color:blue">Male</label>&nbsp;
       &nbsp;
-      <label for="male" style="color:blue">Female</label>&nbsp;
+      
       <input
         type="radio"
         id="gender"
@@ -59,8 +60,9 @@
        
         [(ngModel)]="model.gender"
       />
+      <label for="male" style="color:blue">Female</label>&nbsp;
       &nbsp;
-      <label for="other" style="color:blue">Other</label>&nbsp;
+      
       <input
         type="radio"
         id="gender"
@@ -69,6 +71,7 @@
         
         [(ngModel)]="model.gender"
       />
+      <label for="other" style="color:blue">Other</label>&nbsp;
     </div>
     <br />
     <div class="col-12">
@@ -192,7 +195,7 @@
       <label for="accident" style="color:blue">Basic Package</label>&nbsp;
   
       &nbsp;
-      <label for="luggage" style="color:blue">Partial Package</label>&nbsp;
+      
       <input
         type="radio"
         id="insurance"
@@ -200,8 +203,10 @@
         value="accident+luggage"
         [(ngModel)]="model.insurance"
       />
+      <label for="luggage" style="color:blue">Partial Package</label>&nbsp;
+
       &nbsp;
-      <label for="fraud" style="color:blue">Complete Package</label>&nbsp;
+      
       <input
         type="radio"
         id="insurance"
@@ -209,6 +214,7 @@
         value="accident+luggage+fraud"
         [(ngModel)]="model.insurance"
       />
+      <label for="fraud" style="color:blue">Complete Package</label>&nbsp;
     </div>
     <br />
 
