@@ -19,7 +19,7 @@
   <div>
     <div class="col-12">
       <label for="name"  style="font-style:oblique" >NAME</label>&nbsp;
-      <input type="text" id="name" name="name" placeholder="Enter your name" required="true" [(ngModel)]="model.name" />
+      <input type="text" id="name" name="name" placeholder="Enter your name" required="true" pattern="^[A-Za-z]$" minlength="3" maxlength="25" [(ngModel)]="model.name" />
     </div>
     <br />
     <div class="col-12">
@@ -28,7 +28,7 @@
         type="date"
         id="bookingdate"
         name="bookingdate"
-        required="true"
+       
         [(ngModel)]="model.dob"
       />
     </div>
@@ -43,7 +43,7 @@
         id="gender"
         name="gender"
         value="male"
-        required="true"
+        
         [(ngModel)]="model.gender"
       />
       &nbsp;
@@ -53,7 +53,7 @@
         id="gender"
         name="gender"
         value="female"
-        required="true"
+       
         [(ngModel)]="model.gender"
       />
       &nbsp;
@@ -63,18 +63,20 @@
         id="gender"
         name="gender"
         value="other"
-        required="true"
+        
         [(ngModel)]="model.gender"
       />
     </div>
     <br />
     <div class="col-12">
-      <label for="flightname" style="color:blue" style="font-style:oblique" placeholder="Enter your flight name">FLIGHT NAME</label>&nbsp;
+      <label for="flightname" style="color:blue" style="font-style:oblique" >FLIGHT NAME</label>&nbsp;
       <input
         type="text"
         id="fname"
         name="flightname"
+        placeholder="Enter your flight name"
         required="true"
+
         [(ngModel)]="model.flight_name"
       />
     </div>
