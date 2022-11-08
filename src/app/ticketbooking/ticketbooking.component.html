@@ -81,6 +81,7 @@
         name="flightname"
         placeholder="Enter your flight name"
         required="true"
+        pattern="^[A-Za-z]$"
         [(ngModel)]="model.flight_name"
       />
     </div>
@@ -286,10 +287,10 @@
       <td>{{ ticketbooking.insurance }}</td>
 
      <td>
-        <button (click)="editTicketbooking(ticketbooking.id)">edit</button>
+        <button (click)="editTicketbooking()" value="Display()">edit</button>
       </td>
       <td>
-        <button (click)="deleteTicketbooking(ticketbooking.id)">delete</button>
+        <button (click)="deleteTicketbooking(ticketbooking.id)" value="Display()">delete</button>
       </td> 
     </tr>
   </tbody>
