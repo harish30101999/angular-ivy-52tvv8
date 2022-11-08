@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, Validators } from '@angular/forms';
 
 import { Ticketbooking } from './ticketbooking';
 
@@ -83,6 +83,7 @@ export class TicketbookingComponent implements OnInit {
         .subscribe((data) => {
           this.getAllTicketbooking();
           this.model = new Ticketbooking();
+          Validators.required;
         });
     } else {
       alert(JSON.stringify(this.model));
@@ -91,6 +92,7 @@ export class TicketbookingComponent implements OnInit {
         .subscribe((data) => {
           this.getAllTicketbooking();
           this.model = new Ticketbooking();
+          Validators.required;
         });
     }
   }
