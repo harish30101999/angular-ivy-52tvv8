@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { Ticketbooking } from './ticketbooking';
 
@@ -19,9 +19,12 @@ export class TicketbookingComponent implements OnInit {
 
   constructor(private ticketbookingService: TicketbookingService) {}
 
-  ngOnInit() {
+  ngOnInit() 
+  
+  {
     this.getAllTicketbooking();
   }
+  
   public getAllTicketbooking() {
     this.ticketbookingService
       .getAllTicketbookingService()
@@ -29,42 +32,12 @@ export class TicketbookingComponent implements OnInit {
         this.ticketbooking = x;
       });
   }
+ 
   editTicketbooking(id) {
-    alert(JSON.stringify(this.model));
-
     this.ticketbookingService
-    .getTicketbookingService(id)
-    .subscribe((Data: any[])=>{this.ticketbooking=Data;
-    this.getAllTicketbooking();
-     });
-    // .updateTicketbookingService(this.model.id, this.model)
-    //     .subscribe((data) => {
-    //       // this.getAllTicketbooking();
-    //       // this.model = new Ticketbooking()});
-    //     this.getAllTicketbooking();
-    //     })
+      .getTicketbookingService(id)
+      .subscribe((data: any) => (this.model = data));
   }
-    // .updateTicketbookingService(this.model.id, this.model)
-    //     .subscribe((data) => {
-    //       this.getAllTicketbooking();
-    //       this.model = new Ticketbooking()});
-    //     }
-      // .updateTicketbookingService(this.model.id,this.model)
-      // .subscribe((data: any) => {
-      //   this.getAllTicketbooking()});
-      // .subscribe((data: any) => (this.model = data));
-    // alert(JSON.stringify(this.model));
-  
-
-  // deleteTicketbooking(id: any) {
-  //   alert(JSON.stringify(this.model));
-  //   this.ticketbookingService
-  //     .deleteTicketbookingService(id)
-  //     .subscribe((data) => {
-  //       this.getAllTicketbooking();
-  //     });
-  //   alert(JSON.stringify(this.model));
-  // }
   deleteTicketbooking(id) {
     alert(this.model.id);
     this.ticketbookingService
@@ -93,5 +66,40 @@ export class TicketbookingComponent implements OnInit {
           this.model = new Ticketbooking();
         });
     }
+    
   }
+  //  validat(){
+  //   this.model.name = new FormGroup({
+  //     name:new FormControl("",[Validators.required]
+  //   });
+  // }
+ 
 }
+// ngOnInit() {
+
+//   this.ticketbooking = new FormGroup({
+
+//     firstName:new FormControl("" ,[Validators.required, Validators.maxLength(50)])};)}
+
+    // RegistorComponent.createValidator(this.userService)
+
+ 
+
+    // lastName:new FormControl("" ,Validators.required),
+
+    // email1:new FormControl ('',Validators.compose([Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)])),
+
+
+
+    // email2:new FormControl ('', Validators.compose([Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)])),
+
+    // rmType:new FormControl(""),
+
+    // contactNumber:new FormControl("" ,Validators.required),
+
+   
+
+ 
+
+
+
