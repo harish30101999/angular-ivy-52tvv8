@@ -26,13 +26,20 @@ export class TicketbookingComponent implements OnInit {
       });
   }
   editTicketbooking(id) {
-    alert(this.model.id + ' ' + JSON.stringify(this.model));
+    // alert(this.model.id + ' ' + JSON.stringify(this.model));
+
     this.ticketbookingService
     .updateTicketbookingService(this.model.id, this.model)
         .subscribe((data) => {
           this.getAllTicketbooking();
           this.model = new Ticketbooking()});
-        }
+
+  }
+    // .updateTicketbookingService(this.model.id, this.model)
+    //     .subscribe((data) => {
+    //       this.getAllTicketbooking();
+    //       this.model = new Ticketbooking()});
+    //     }
       // .updateTicketbookingService(this.model.id,this.model)
       // .subscribe((data: any) => {
       //   this.getAllTicketbooking()});
