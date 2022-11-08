@@ -34,7 +34,7 @@ export class TicketbookingComponent implements OnInit {
 
     this.ticketbookingService
     .getTicketbookingService(id)
-    .subscribe((Data: any[])=>{(this.ticketbooking=Data)});
+    .subscribe((Data: any[])=>{this.ticketbooking=Data;});
     // .updateTicketbookingService(this.model.id, this.model)
     //     .subscribe((data) => {
     //       // this.getAllTicketbooking();
