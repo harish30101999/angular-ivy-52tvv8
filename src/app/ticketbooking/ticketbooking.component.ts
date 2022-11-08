@@ -26,7 +26,7 @@ export class TicketbookingComponent implements OnInit {
       });
   }
   editTicketbooking(id) {
-    // alert(this.model.id + ' ' + JSON.stringify(this.model));
+    alert(JSON.stringify(this.model));
 
     this.ticketbookingService
     .updateTicketbookingService(this.model.id, this.model)
