@@ -21,7 +21,7 @@
     <div class="col-12">
       <p>
       <label for="name"  style="font-style:oblique" >NAME</label>&nbsp;
-      <input type="text" id="name" name="name" placeholder="Enter your name" required="true" pattern="^[A-Za-z]$" minlength="3" maxlength="25" [(ngModel)]="model.name" />
+      <input type="text" id="name" name="name" placeholder="Enter your name" pattern="^[A-Za-z]$" minlength="3" maxlength="25" required [(ngModel)]="model.name" />
     </p>
     </div>
     <br />
@@ -287,9 +287,9 @@
       <td>{{ ticketbooking.payment_mode }}</td>
       <td>{{ ticketbooking.insurance }}</td>
 
-     <!-- <td>
+      <td>
         <button (click)="editTicketbooking(ticketbooking.id)" value="Display()">edit</button>
-      </td> -->
+      </td> 
       <td>
         <button (click)="deleteTicketbooking(ticketbooking.id)" value="Display()">delete</button>
       </td> 

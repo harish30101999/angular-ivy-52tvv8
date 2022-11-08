@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+
 import { Ticketbooking } from './ticketbooking';
 
 import { TicketbookingService } from './ticketbooking.service';
@@ -12,6 +14,8 @@ export class TicketbookingComponent implements OnInit {
   myImage:string="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVtDW6C65Xb6_W-ot54cP-h1bz8vh3K7QuzQ&usqp=CAU"
   ticketbooking = [];
   model = new Ticketbooking();
+  form: FormGroup;
+  submitted = false;
 
   constructor(private ticketbookingService: TicketbookingService) {}
 
@@ -29,12 +33,14 @@ export class TicketbookingComponent implements OnInit {
     alert(JSON.stringify(this.model));
 
     this.ticketbookingService
-    .updateTicketbookingService(this.model.id, this.model)
-        .subscribe((data) => {
-          // this.getAllTicketbooking();
-          // this.model = new Ticketbooking()});
-        this.getAllTicketbooking();
-        })
+    .getTicketbookingService(id)
+    .subscribe((Data: any[])=>(this.ticketbooking=Data))
+    // .updateTicketbookingService(this.model.id, this.model)
+    //     .subscribe((data) => {
+    //       // this.getAllTicketbooking();
+    //       // this.model = new Ticketbooking()});
+    //     this.getAllTicketbooking();
+    //     })
   }
     // .updateTicketbookingService(this.model.id, this.model)
     //     .subscribe((data) => {
