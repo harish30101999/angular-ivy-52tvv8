@@ -31,9 +31,10 @@ export class TicketbookingComponent implements OnInit {
     this.ticketbookingService
     .updateTicketbookingService(this.model.id, this.model)
         .subscribe((data) => {
-          this.getAllTicketbooking();
-          this.model = new Ticketbooking()});
-
+          // this.getAllTicketbooking();
+          // this.model = new Ticketbooking()});
+        this.getAllTicketbooking();
+        })
   }
     // .updateTicketbookingService(this.model.id, this.model)
     //     .subscribe((data) => {
