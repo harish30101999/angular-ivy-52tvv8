@@ -83,7 +83,7 @@ export class TicketbookingComponent implements OnInit {
         .subscribe((data) => {
           this.getAllTicketbooking();
           this.model = new Ticketbooking();
-          Validators.required;
+          Validators.required.name;
         });
     } else {
       alert(JSON.stringify(this.model));
@@ -92,7 +92,7 @@ export class TicketbookingComponent implements OnInit {
         .subscribe((data) => {
           this.getAllTicketbooking();
           this.model = new Ticketbooking();
-          Validators.required;
+          Validators.required.name;
         });
     }
   }
