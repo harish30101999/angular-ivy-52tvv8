@@ -28,12 +28,17 @@ export class TicketbookingComponent implements OnInit {
   editTicketbooking(id) {
     alert(this.model.id + ' ' + JSON.stringify(this.model));
     this.ticketbookingService
-      .updateTicketbookingService(this.model.id,this.model)
-      .subscribe((data: any) => {
-        this.getAllTicketbooking()});
+    .updateTicketbookingService(this.model.id, this.model)
+        .subscribe((data) => {
+          this.getAllTicketbooking();
+          this.model = new Ticketbooking()});
+        }
+      // .updateTicketbookingService(this.model.id,this.model)
+      // .subscribe((data: any) => {
+      //   this.getAllTicketbooking()});
       // .subscribe((data: any) => (this.model = data));
-    alert(JSON.stringify(this.model));
-  }
+    // alert(JSON.stringify(this.model));
+  
 
   // deleteTicketbooking(id: any) {
   //   alert(JSON.stringify(this.model));
