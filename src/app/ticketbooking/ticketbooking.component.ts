@@ -59,7 +59,7 @@ export class TicketbookingComponent implements OnInit {
   }
 
   addTicketbooking() {
-    //  alert(JSON.stringify(this.model));
+     alert(JSON.stringify(this.model));
     if (!this.model.id) {
       // alert(JSON.stringify(this.model));
       this.ticketbookingService

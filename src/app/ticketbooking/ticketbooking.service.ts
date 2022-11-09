@@ -20,7 +20,7 @@ export class TicketbookingService {
   //   return this.httpClient.delete('http://localhost:8080/ticketbooking/' + id);
   // }
   public createTicketbookingService(ticketbooking: Ticketbooking) {
-    alert(JSON.stringify(ticketbooking));
+   // alert(JSON.stringify(ticketbooking));
     const headers = { 'content-type': 'application/json' };
     return this.httpClient.post(
       'http://localhost:8080/ticketbooking/',
