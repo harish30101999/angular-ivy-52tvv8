@@ -32,7 +32,7 @@ export class TicketbookingComponent implements OnInit {
         this.ticketbooking = x;
       });
   }
-  editFlight(id: string) {
+  editTicketbooking(id: string) {
 
     alert(id);
 
