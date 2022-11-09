@@ -16,9 +16,7 @@ export class TicketbookingService {
   public deleteTicketbookingService(id) {
     return this.httpClient.delete('http://localhost:8080/ticketbooking/' + id);
   }
-  // public deleteTicketbookingService(id: string) {
-  //   return this.httpClient.delete('http://localhost:8080/ticketbooking/' + id);
-  // }
+  
   public createTicketbookingService(ticketbooking: Ticketbooking) {
    // alert(JSON.stringify(ticketbooking));
     const headers = { 'content-type': 'application/json' };
