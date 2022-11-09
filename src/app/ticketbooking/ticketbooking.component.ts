@@ -32,12 +32,23 @@ export class TicketbookingComponent implements OnInit {
         this.ticketbooking = x;
       });
   }
- 
-  editTicketbooking(id) {
+  editFlight(id: string) {
+
+    alert(id);
+
     this.ticketbookingService
+
       .getTicketbookingService(id)
+
       .subscribe((data: any) => (this.model = data));
+
   }
+ 
+  // editTicketbooking(id) {
+  //   this.ticketbookingService
+  //     .getTicketbookingService(id)
+  //     .subscribe((data: any) => (this.model = data));
+  // }
   deleteTicketbooking(id) {
     alert(this.model.id);
     this.ticketbookingService
