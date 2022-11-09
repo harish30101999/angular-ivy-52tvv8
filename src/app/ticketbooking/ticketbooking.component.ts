@@ -50,7 +50,7 @@ export class TicketbookingComponent implements OnInit {
   //     .subscribe((data: any) => (this.model = data));
   // }
   deleteTicketbooking(id) {
-    alert(this.model.id);
+    alert(id);
     this.ticketbookingService
       .deleteTicketbookingService(id)
       .subscribe((data) => {
@@ -59,7 +59,7 @@ export class TicketbookingComponent implements OnInit {
   }
 
   addTicketbooking() {
-     alert(JSON.stringify(this.model));
+    //  alert(JSON.stringify(this.model));
     if (!this.model.id) {
       // alert(JSON.stringify(this.model));
       this.ticketbookingService
