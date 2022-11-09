@@ -11,7 +11,7 @@ export class Ticketbooking {
     drop: string;
     insurance: string;
    
-    constructor(values: Object = {}) {
-      Object.assign(this, values);
-    }
+    // constructor(values: Object = {}) {
+    //   Object.assign(this, values);
+    // }
   }
