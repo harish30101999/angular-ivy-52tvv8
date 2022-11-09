@@ -48,7 +48,7 @@ export class TicketbookingComponent implements OnInit {
   }
 
   addTicketbooking() {
-    // alert(JSON.stringify(this.model));
+     alert(JSON.stringify(this.model));
     if (!this.model.id) {
       // alert(JSON.stringify(this.model));
       this.ticketbookingService
@@ -58,7 +58,7 @@ export class TicketbookingComponent implements OnInit {
           this.model = new Ticketbooking();
         });
     } else {
-      alert(JSON.stringify(this.model));
+      // alert(JSON.stringify(this.model));
       this.ticketbookingService
         .updateTicketbookingService(this.model.id, this.model)
         .subscribe((data) => {
