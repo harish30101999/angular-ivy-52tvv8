@@ -44,11 +44,7 @@ export class TicketbookingComponent implements OnInit {
 
   }
  
-  // editTicketbooking(id) {
-  //   this.ticketbookingService
-  //     .getTicketbookingService(id)
-  //     .subscribe((data: any) => (this.model = data));
-  // }
+ 
   deleteTicketbooking(id) {
     alert(id);
     this.ticketbookingService
@@ -79,38 +75,5 @@ export class TicketbookingComponent implements OnInit {
     }
     
   }
-  //  validat(){
-  //   this.model.name = new FormGroup({
-  //     name:new FormControl("",[Validators.required]
-  //   });
-  // }
  
 }
-// ngOnInit() {
-
-//   this.ticketbooking = new FormGroup({
-
-//     firstName:new FormControl("" ,[Validators.required, Validators.maxLength(50)])};)}
-
-    // RegistorComponent.createValidator(this.userService)
-
- 
-
-    // lastName:new FormControl("" ,Validators.required),
-
-    // email1:new FormControl ('',Validators.compose([Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)])),
-
-
-
-    // email2:new FormControl ('', Validators.compose([Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)])),
-
-    // rmType:new FormControl(""),
-
-    // contactNumber:new FormControl("" ,Validators.required),
-
-   
-
- 
-
-
-
