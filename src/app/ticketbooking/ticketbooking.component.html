@@ -23,7 +23,7 @@
     <div class="col-12" >
       <p>
       <label for="name"  style="font-style:oblique" >NAME</label>&nbsp;
-      <input type="text" id="name" name="name" placeholder="Enter your name" required="true" [(ngModel)]="model.name" />
+      <input type="text" id="name" name="name" placeholder="Enter your name"  required="true" [(ngModel)]="model.name" />
     </p>
     </div>
     <br />
@@ -253,9 +253,9 @@
     <label style="color:blue">Complete Package - accident,luggage and online fraud insurance</label>
     <br>
     <!-- <input type="submit" class="btn btn-success" value="save" /> -->
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-    <button  onclick="window.history.back()">Back</button>
+    <button type="submit" style="color:blue">Submit</button>
+    <button type="reset" style="color:blue">Reset</button>
+    <button  onclick="window.history.back()" style="color:blue">Back</button>
     
   </div>
 </form>
@@ -291,10 +291,10 @@
       <td>{{ ticketbooking.payment_mode }}</td>
       <td>{{ ticketbooking.insurance }}</td>
        <td>
-        <button (click)="editTicketbooking(ticketbooking.id)" value="Display()">edit</button>
+        <button (click)="editTicketbooking(ticketbooking.id)" value="Display()" style="color:blue">edit</button>
       </td> 
       <td>
-        <button (click)="deleteTicketbooking(ticketbooking.id)" value="Display()">delete</button>
+        <button (click)="deleteTicketbooking(ticketbooking.id)" value="Display()" style="color:blue">delete</button>
       </td> 
     </tr>
   </tbody>
