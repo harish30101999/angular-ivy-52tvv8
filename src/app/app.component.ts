@@ -1,7 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 
 @Component({
-  selector: 'app-ticketbooking',
+  selector: 'app',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
