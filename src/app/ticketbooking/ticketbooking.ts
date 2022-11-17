@@ -3,7 +3,7 @@ export class Ticketbooking {
     name: string;
     dob: String;
     gender: String;
-    flight_name: number;
+    flight_name: String;
     booking_date: string;
     booking_time: string;
     payment_mode: string;
